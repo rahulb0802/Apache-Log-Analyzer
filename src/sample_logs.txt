@@ -1,0 +1,25 @@
+127.0.0.1 - - [01/Sep/2024:12:23:01 +0000] "GET /index.html HTTP/1.1" 200 512
+192.168.1.10 - - [01/Sep/2024:12:23:05 +0000] "POST /login?user=admin&password=password123 HTTP/1.1" 200 1024
+192.168.1.5 - - [01/Sep/2024:12:23:10 +0000] "POST /login?user=admin&password=' OR '1'='1 HTTP/1.1" 200 1024
+192.168.1.10 - - [01/Sep/2024:12:23:15 +0000] "POST /login?user=admin&password=password123 HTTP/1.1" 200 1024
+10.0.0.3 - - [01/Sep/2024:12:23:20 +0000] "GET /admin HTTP/1.1" 403 256
+192.168.1.5 - - [01/Sep/2024:12:23:25 +0000] "GET /config HTTP/1.1" 403 256
+192.168.1.5 - - [01/Sep/2024:12:23:30 +0000] "GET /products?id=1 UNION SELECT null, username, password FROM users HTTP/1.1" 200 256
+192.168.1.10 - - [01/Sep/2024:12:23:35 +0000] "GET /search?query=' OR '1'='1 HTTP/1.1" 200 512
+192.168.1.15 - - [01/Sep/2024:12:23:40 +0000] "GET /index.html HTTP/1.1" 404 512
+192.168.1.15 - - [01/Sep/2024:12:23:45 +0000] "GET /index.html HTTP/1.1" 200 512
+192.168.1.15 - - [01/Sep/2024:12:23:50 +0000] "GET /index.html HTTP/1.1" 200 512
+192.168.1.15 - - [01/Sep/2024:12:23:55 +0000] "GET /index.html HTTP/1.1" 200 512
+192.168.1.15 - - [01/Sep/2024:12:24:00 +0000] "GET /index.html HTTP/1.1" 200 512
+10.0.0.5 - - [01/Sep/2024:12:24:05 +0000] "POST /login?user=admin&password='-- HTTP/1.1" 200 512
+10.0.0.5 - - [01/Sep/2024:12:24:10 +0000] "POST /login?user=admin&password='-- HTTP/1.1" 200 512
+10.0.0.5 - - [01/Sep/2024:12:24:15 +0000] "POST /login?user=admin&password='-- HTTP/1.1" 200 512
+192.168.1.10 - - [01/Sep/2024:12:25:01 +0000] "POST /login?user=admin&password=wrongpassword HTTP/1.1" 401 512
+192.168.1.10 - - [01/Sep/2024:12:25:05 +0000] "POST /login?user=admin&password=incorrectpassword HTTP/1.1" 401 512
+192.168.1.12 - - [01/Sep/2024:12:25:10 +0000] "POST /login?user=admin&password=1234 HTTP/1.1" 401 512
+192.168.1.10 - - [01/Sep/2024:12:25:15 +0000] "POST /login?user=admin&password=admin123 HTTP/1.1" 401 512
+192.168.1.10 - - [01/Sep/2024:12:25:20 +0000] "POST /login?user=admin&password=wrong HTTP/1.1" 401 512
+192.168.1.10 - - [01/Sep/2024:12:25:25 +0000] "POST /login?user=admin&password=invalid HTTP/1.1" 401 512
+192.168.1.15 - - [01/Sep/2024:12:25:30 +0000] "POST /login?user=admin&password=pass HTTP/1.1" 401 512
+192.168.1.16 - - [01/Sep/2024:12:25:35 +0000] "POST /login?user=admin&password=password HTTP/1.1" 401 512
+192.168.1.17 - - [01/Sep/2024:12:25:40 +0000] "POST /login?user=admin&password=letme HTTP/1.1" 401 512
