@@ -24,6 +24,6 @@
     <h2>Example Log File</h2>
     <p>An example of a log entry format that the analyzer can parse:</p>
     <pre><code>192.168.1.10 - - [01/Sep/2024:12:23:05 +0000] "POST /login?user=admin&password=password123 HTTP/1.1" 200 1024</code></pre>
-  <p>Sample logs are included in the project</p>
+  <p>Sample logs are included in the project.</p>
 </body>
 </html>
